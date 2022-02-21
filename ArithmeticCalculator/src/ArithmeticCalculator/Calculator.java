@@ -2,29 +2,23 @@ package ArithmeticCalculator;
 
 import java.util.*;
 
-public class Calculator{
+//Using Inheritance to access the Protected methods
+public class Calculator extends Calci{
 	
 	//Private Addition and Subtraction methods
 	private float addition(float a, float b){
 		return a + b;
 	}
+	//Static Private Class
 	private float subtraction(float a, float b){
 		return a - b;
 	}
 	
-	//Protected Multiplication and Division methods
-	protected float multiplication(float a, float b){
-		return a * b;
-	}
-
-	protected float division(float a, float b){
-		return a / b;
-	}
-	
-	
 	public static void main(String[] args) {
 		//Calling method using Object
 		Calculator myCal = new Calculator();
+		// Calling Protected method using Object
+		Calci mycal1 = new Calci();
 		
 		// Do While loop for Repeating Calculation
 		char ch;
@@ -57,13 +51,13 @@ public class Calculator{
 			
 		
 		case '*':
-			result = myCal.multiplication(x, y);
+			result = mycal1.multiplication(x, y);
 			break;
 			
 		case '/':
 			// if else statement For Zero Division 
 			if (y != 0) {
-			result = myCal.division(x, y);
+			result = mycal1.division(x, y);
 			break;}
 			else {
 				System.out.println("Cannot be divisible by zero.");
