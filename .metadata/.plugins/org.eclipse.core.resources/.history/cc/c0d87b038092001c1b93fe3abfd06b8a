@@ -1,7 +1,0 @@
-package ArithmeticCalculator;
-
-public class MultiplyDivide {
-	protected double multiply(double a, double b) {
-		
-	}
-}
