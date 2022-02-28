@@ -1,13 +1,13 @@
-package CoreJava;
+package TypeCasting;
 
-import java.util.*;
+import java.util.Scanner;
 
-public class ImplictTypeCasting {
+public class ImplicitTypeCasting {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter any Charcter(A-Z or a-z etc single digits) 15: ");
+		System.out.println("Enter any Charcter(A-Z or a-z etc single digits) is: ");
 		char c = scan.next().charAt(0);
 		scan.close();
 		
@@ -23,8 +23,6 @@ public class ImplictTypeCasting {
 		System.out.println("Short value of " + c + " is: " + s);
 		System.out.println("Integer value of " + c + " is: " + b);
 		System.out.println("Long value of " + c + " is: " + l);
-		
-
 	}
 
 }

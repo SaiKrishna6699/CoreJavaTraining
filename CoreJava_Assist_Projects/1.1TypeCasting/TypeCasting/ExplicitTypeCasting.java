@@ -1,10 +1,11 @@
-package CoreJava;
+package TypeCasting;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class ExplicitTypeCasting {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter the Double Value \n");
 		double d = s.nextDouble();
@@ -20,7 +21,6 @@ public class ExplicitTypeCasting {
 		System.out.println("Long value of "+ d + "is: " + l);
 		System.out.println("Integer value of "+ d + "is: " + i);
 		System.out.println("Character value of "+ d + "is: " + c);
-
 
 	}
 
