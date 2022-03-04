@@ -6,27 +6,27 @@ public class LISubSequence {
 	
 	static int Incre_SubSequence(int Arr[], int Arr_Length)
 	{
-		int lis[] = new int[Arr_Length];
+		int Seq_Arr[] = new int[Arr_Length];
 		int i, j, max = 0;
 
-		/* Initialize LIS values for all indexes */
+		/* Initialize LIST values for all indexes */
 		for (i = 0; i < Arr_Length; i++) {
-			lis[i] = 1;
+			Seq_Arr[i] = 1;
 		}
 
 		/* Compute optimized LIS values in bottom up manner */
 		for (i = 1; i < Arr_Length; i++) {
 			for (j = 0; j < i; j++) {
-				if (Arr[i] > Arr[j] && lis[i] < lis[j] + 1) {
-					lis[i] = lis[j] + 1;
+				if (Arr[i] > Arr[j] && Seq_Arr[i] < Seq_Arr[j] + 1) {
+					Seq_Arr[i] = Seq_Arr[j] + 1;
 				}
 			}
 		}
 
 		/* Pick maximum of all LIS values */
 		for (i = 0; i < Arr_Length; i++) {
-			if (max < lis[i]) {
-				max = lis[i];
+			if (max < Seq_Arr[i]) {
+				max = Seq_Arr[i];
 			}
 		}
 
