@@ -7,12 +7,15 @@ public class LISubSequence {
 	static int Incre_SubSequence(int Arr[], int Arr_Length)
 	{
 		int Seq_Arr[] = new int[Arr_Length];
-		int i, j, max = 0;
-
+		int i, j, LIS = 0;
+		
+		
 		/* Initialize LIST values for all indexes */
 		for (i = 0; i < Arr_Length; i++) {
 			Seq_Arr[i] = 1;
 		}
+		
+		
 
 		/* Compute optimized LIS values in bottom up manner */
 		for (i = 1; i < Arr_Length; i++) {
@@ -25,12 +28,14 @@ public class LISubSequence {
 
 		/* Pick maximum of all LIS values */
 		for (i = 0; i < Arr_Length; i++) {
-			if (max < Seq_Arr[i]) {
-				max = Seq_Arr[i];
+			if (LIS < Seq_Arr[i]) {
+				LIS = Seq_Arr[i];
 			}
 		}
 
-		return max;
+		return LIS;
+		
+		
 	}
 
 	public static void main(String args[])
